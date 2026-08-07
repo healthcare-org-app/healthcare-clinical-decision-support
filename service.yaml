@@ -1,0 +1,14 @@
+name: clinical-decision-support
+port: 8312
+lang: python
+description: "clinical-decision-support \u2014 domain: ehr"
+http_deps:
+- ehr-service
+- ai-invocations-service
+- drug-interactions-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- lab.result.available
+- encounter.started
