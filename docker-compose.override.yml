@@ -1,7 +1,7 @@
 services:
   clinical-decision-support:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: clinical_decision_support
     depends_on:
       postgres:
         condition: service_healthy
